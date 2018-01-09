@@ -8,6 +8,7 @@
 			//$this is not used in static methods
 			//here it was $this->minPassLength for dynamic function
 			//:: is scope resolution operator
+            //self keyword is used when calling a static property within a method
 			if (strlen($password) >= self::$minPassLength) {
 				return true;
 			} else {
