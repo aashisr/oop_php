@@ -38,7 +38,7 @@
             $this->stmt = $this->dbh->prepare($query);
         }
         
-        //Create a bind function to bind data
+        //Create a bind function to bind prepare statement
         public function bind($param, $value, $type = null){
             if (is_null($type)){
                 switch (true){
@@ -66,6 +66,12 @@
         public function execute(){
             //mysqli_stmt::execute -- mysqli_stmt_execute — Executes a prepared Query
             return $this->stmt->execute();
+        }
+
+        //Function required to insert post body and title
+        //lastInsertId returns the ID of the last inserted row or sequence value
+        public function lastInsertID(){
+            $this->dbh->lastInsertId();
         }
 
         public function resultset(){

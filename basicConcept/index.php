@@ -1,4 +1,6 @@
-<?php 
+<?php
+//Object Operator (->) is used in object scope to access methods and properties of objects
+//Double arrow operator (=>) is used as an access mechanism for arrays.
 
 	/**
 	* 
